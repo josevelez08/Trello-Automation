@@ -3,8 +3,8 @@
 //Creating and sending a document in Pandadocs
 const api_key = {
 	headers: {'Authorization': 'API-Key {api_key}'}
-}
-const axios = require('axios')
+};
+const axios = require('axios');
 
 axios
 	.post("https://api.pandadoc.com/public/v1/documents", {
