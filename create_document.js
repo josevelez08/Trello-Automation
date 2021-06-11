@@ -15,16 +15,6 @@ const data = {
 			"role": "user"
 		}
 	],
-	"fields": {
-		"name": {
-			"value": "John",
-			"role": "user"
-		},
-		"like": {
-			"value": true,
-			"role": "user"
-		}
-	},
 	"metadata": {
 		"salesforce.opportunity_id": "123456",
 		"my_favorite_pet": "Panda"

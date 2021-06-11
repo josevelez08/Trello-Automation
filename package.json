@@ -1,0 +1,20 @@
+{
+  "name": "trello-automation",
+  "version": "1.0.0",
+  "description": "Integration between trello and pandadocs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josevelez08/Trello-Automation.git"
+  },
+  "author": "Jose Velez, ANdres Sepulveda, Jordan Buitrago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josevelez08/Trello-Automation/issues"
+  },
+  "homepage": "https://github.com/josevelez08/Trello-Automation#readme",
+  "keywords": []
+}
