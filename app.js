@@ -12,10 +12,12 @@ app.use(bodyParser.json());
 app.post('/events', function (req, res) {
   const temp = req.body.action.display.translationKey;
   const  id = req.body.action.idMemberCreator
-  console.log(id);
-  if (temp == 'action_move_card_from_list_to_list')
+  const listBefore = req.body.action.data.listBefore;
+  const listAfter = req.body.action.data.listAfter;
+  if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'En proceso' && listAfter.name == 'Lista de tareas')
   {
-    getEmail(id);
+    console.log('We got');
+    // getEmail(id);
   };
 });
 
