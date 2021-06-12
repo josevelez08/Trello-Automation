@@ -31,7 +31,7 @@ app.post('/events', function (req, res) {
   const listAfter = req.body.action.data.listAfter;
   if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
   {
-    console.log('We got');
+    console.log('Request received');
     member(id);
   };
 });
