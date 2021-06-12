@@ -29,11 +29,10 @@ app.post('/events', function (req, res) {
   const  id = req.body.action.idMemberCreator
   const listBefore = req.body.action.data.listBefore;
   const listAfter = req.body.action.data.listAfter;
-  const idcard = req.body.action.data.card.id;
-  if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
+  if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'En proceso' && listAfter.name == 'Lista de tareas')
   {
-    console.log('Request received');
-    member(id);
+    console.log('We got');
+    // getEmail(id);
   };
 });
 
