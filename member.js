@@ -10,9 +10,9 @@ headers: {
 }
 })
 .then(response => {
-  console.log(
-    `Response: ${response.status} ${response.statusText}`
-  );
+  //console.log(
+    //`Response: ${response.status} ${response.statusText}`
+  //);
   return response.json();
 })
 .then(json => {
