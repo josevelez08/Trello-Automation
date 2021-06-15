@@ -20,7 +20,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const hostname = '127.0.0.1';
-const port = 80;
+const port = 3000;
 
 app.use(bodyParser.json());
 
@@ -37,11 +37,11 @@ app.post('/events', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-  return "Trello app";
+  res.send("hello world")
 });
 
 
-app.listen(port, () => {
+app.listen(port , () => {
   console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
 });
 
