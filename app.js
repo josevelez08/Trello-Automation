@@ -36,6 +36,11 @@ app.post('/events', function (req, res) {
   };
 });
 
+app.get('/', function (req, res) {
+  return "Trello app";
+});
+
+
 app.listen(port, () => {
   console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
 });
