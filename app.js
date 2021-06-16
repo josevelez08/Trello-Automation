@@ -29,8 +29,9 @@ app.post('/events', function (req, res) {
   // const  id = req.body.action.idMemberCreator
   // const listBefore = req.body.action.data.listBefore;
   // const listAfter = req.body.action.data.listAfter;
+  console.log('Request received', req.body);
   res.status(200)
-   console.log('Request received', req.body);
+  res.send({});
   // if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
   // {
   // };
