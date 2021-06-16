@@ -43,6 +43,11 @@ app.head('/events', function (req, res) {
   res.send({});
 });
 
+app.get('/events', function (req, res) {
+  res.status(200)
+  res.send({});
+});
+
 app.get('/', function (req, res) {
   res.send("hello world")
 });
