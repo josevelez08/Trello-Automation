@@ -29,12 +29,18 @@ app.post('/events', function (req, res) {
   // const  id = req.body.action.idMemberCreator
   // const listBefore = req.body.action.data.listBefore;
   // const listAfter = req.body.action.data.listAfter;
-  console.log('Request received', req.body);
+  console.log('Request post', req.body);
   res.status(200)
   res.send({});
   // if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
   // {
   // };
+});
+
+app.head('/events', function (req, res) {
+  console.log('Request head', req.body);
+  res.status(200)
+  res.send({});
 });
 
 app.get('/', function (req, res) {
