@@ -25,11 +25,12 @@ const port = process.env.PORT || 80;
 app.use(bodyParser.json());
 
 app.post('/events', function (req, res) {
-  const temp = req.body.action.display.translationKey;
-  const  id = req.body.action.idMemberCreator
-  const listBefore = req.body.action.data.listBefore;
-  const listAfter = req.body.action.data.listAfter;
-  console.log('Request received');
+  // const temp = req.body.action.display.translationKey;
+  // const  id = req.body.action.idMemberCreator
+  // const listBefore = req.body.action.data.listBefore;
+  // const listAfter = req.body.action.data.listAfter;
+  res.status(200)
+   console.log('Request received', req.body);
   // if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
   // {
   // };
