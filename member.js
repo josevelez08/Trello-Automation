@@ -1,6 +1,6 @@
 // This code sample uses the 'node-fetch' library:
 // https://www.npmjs.com/package/node-fetch
-const document = require('./document.js')
+const document = require('./create_document.js')
 module.exports = function getEmail(id){
     const fetch = require('node-fetch');
 
