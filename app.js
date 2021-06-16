@@ -1,6 +1,7 @@
 const member = require('./member.js');
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 // const SmeeClient = require('smee-client')
 
 // const smeeStar = ()=> {
@@ -37,8 +38,9 @@ app.post('/events', function (req, res) {
   // };
 });
 app.get('/googlea08991f6f71af58f',function(req,res) {
-  res.sendFile('google.html');
+  res.sendFile(path.join(__dirname+'/google.html'));
 });
+
 app.head('/events', function (req, res) {
   console.log('Request head', req.body);
   res.status(200)
