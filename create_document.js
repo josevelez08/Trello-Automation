@@ -4,20 +4,24 @@
 const api_key = {
 	headers: {'Authorization': 'API-Key 141e9c21ff9ef73c8102f18d39906ce2eec47f97'}
 };
+
+module.exports = function document(name){
 const axios = require('axios');
+
+const fullname = name.split(' ');
 
 axios
 	.post("https://api.pandadoc.com/public/v1/documents", {
-		"name": "Sample Document from PDF with Field Tags",
+		"name": "Vacation Request",
 		"url": "https://drive.google.com/uc?export=download&id=1BEZa7zCOXXiZpvcSJ8phRv01A8QCv_-_GAIoH2KkmMU",
 		"tags": [
 		   "tag_1",
 		],
 		"recipients": [
 			{
-				"email": "1908@holbertonschool.com",
-				"first_name": "Andres",
-				"last_name": "Sepulveda",
+				"email": 'andress.933110@gmail.com',
+				"first_name": fullname[0],
+				"last_name": fullname[1],
 				"role": "user"
 			}
 		],
@@ -34,3 +38,4 @@ axios
 	  .catch(error => {
 		console.error(error)
 	  })
+}
