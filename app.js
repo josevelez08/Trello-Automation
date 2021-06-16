@@ -20,7 +20,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const hostname = '127.0.0.1';
-const port = 8080;
+const port = process.env.PORT || 80;
 
 app.use(bodyParser.json());
 
