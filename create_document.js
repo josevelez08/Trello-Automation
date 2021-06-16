@@ -13,7 +13,7 @@ const fullname = name.split(' ');
 axios
 	.post("https://api.pandadoc.com/public/v1/documents", {
 		"name": "Vacation Request",
-		"url": "https://drive.google.com/uc?export=download&id=1BEZa7zCOXXiZpvcSJ8phRv01A8QCv_-_GAIoH2KkmMU",
+		"url": "https://cdn2.hubspot.net/hubfs/20250585/Test%20-%20Document.pdf",
 		"tags": [
 		   "tag_1",
 		],
