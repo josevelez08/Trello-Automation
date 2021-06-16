@@ -30,10 +30,9 @@ app.post('/events', function (req, res) {
   const listBefore = req.body.action.data.listBefore;
   const listAfter = req.body.action.data.listAfter;
   console.log('Request received');
-  if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
-  {
-    member(id);
-  };
+  // if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
+  // {
+  // };
 });
 
 app.get('/', function (req, res) {
