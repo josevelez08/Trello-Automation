@@ -40,7 +40,9 @@ app.post('/events', function (req, res) {
 app.get('/googlea08991f6f71af58f',function(req,res) {
   res.sendFile(path.join(__dirname+'/google.html'));
 });
-
+app.get('/googlea08991f6f71af58f.html',function(req,res) {
+  res.sendFile(path.join(__dirname+'/google.html'));
+});
 app.head('/events', function (req, res) {
   console.log('Request head', req.body);
   res.status(200)
