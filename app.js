@@ -29,9 +29,6 @@ app.head('/events', function (req, res) {
   res.status(200)
   res.send({});
 });
-router.get('/landing-page',function(req,res){
-  res.sendFile(path.join(__dirname+'Landing\ page/'+'/index.html'));
-});
 
 app.get('/events', function (req, res) {
   res.status(200)
