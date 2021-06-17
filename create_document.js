@@ -1,6 +1,5 @@
-#!/usr/bin/node
-
 //Creating and sending a document in Pandadocs
+const send = require('./send_document.js');
 const api_key = {
 	headers: {'Authorization': 'API-Key 141e9c21ff9ef73c8102f18d39906ce2eec47f97'}
 };
@@ -16,6 +15,7 @@ axios
 		"url": "https://cdn2.hubspot.net/hubfs/20250585/Test%20-%20Document.pdf",
 		"tags": [
 		   "tag_1",
+		   "tag_2",
 		],
 		"recipients": [
 			{
@@ -25,6 +25,12 @@ axios
 				"role": "user"
 			}
 		],
+		"fields": {
+			"name": {
+				"value": "Andres",
+				"role": "user"
+			},
+		},
 		"metadata": {
 			"salesforce.opportunity_id": "123456",
 			"my_favorite_pet": "Panda"
@@ -32,10 +38,10 @@ axios
 		"parse_form_fields": false
 	}, api_key)
 	.then(res => {
-		console.log(`statusCode: ${res.statusCode}`)
-		console.log(res)
+		const docid = res.data.id;
+		setTimeout(send, 5000, docid);
 	  })
 	  .catch(error => {
-		console.error(error)
+		console.error(error.data)
 	  })
 }
