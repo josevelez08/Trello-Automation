@@ -39,7 +39,7 @@ app.get('/events', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-  res.send("hello world")
+  res.send("Trepi - a trello pandadocs integration")
 });
 
 
