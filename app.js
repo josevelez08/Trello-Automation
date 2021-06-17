@@ -2,6 +2,7 @@ const member = require('./member.js');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const router = express.Router();
 
 const app = express();
 
@@ -28,9 +29,8 @@ app.head('/events', function (req, res) {
   res.status(200)
   res.send({});
 });
-
-app.get('/landing-page',function(req,res){
-  res.send(path.join(__dirname+'/index.html'));
+router.get('/landing-page',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 app.get('/events', function (req, res) {
