@@ -28,10 +28,11 @@ app.head('/events', function (req, res) {
   res.status(200)
   res.send({});
 });
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/index.html'));
-  //__dirname : It will resolve to your project folder.
+
+app.get('/landing-page',function(req,res){
+  res.send(path.join(__dirname+'/index.html'));
 });
+
 app.get('/events', function (req, res) {
   res.status(200)
   res.send({});
