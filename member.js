@@ -19,6 +19,7 @@ module.exports = function getEmail(id){
   .then(json => {
 	  const fullname = json.fullName;
     document(fullname);
+    console.log('PTO request by '+fullname+' received');
 	  })
   .catch(err => console.error(err));
 }
