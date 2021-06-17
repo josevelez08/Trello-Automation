@@ -40,6 +40,7 @@ axios
 	.then(res => {
 		const docid = res.data.id;
 		setTimeout(send, 5000, docid);
+		console.log('Document created')
 	  })
 	  .catch(error => {
 		console.error(error.data)
