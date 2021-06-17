@@ -18,7 +18,7 @@ app.post('/events', function (req, res) {
   const listAfter = req.body.action.data.listAfter;
   res.status(200)
   res.send({});
-  if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Lista de tareas' && listAfter.name == 'En proceso')
+  if (temp == 'action_move_card_from_list_to_list' && listBefore.name == 'Tasks' && listAfter.name == 'In progress')
   {
     member(id);
   };
@@ -39,8 +39,5 @@ app.get('/', function (req, res) {
 
 
 app.listen(port , () => {
-  console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
-
-
-//module.exports = { id }
